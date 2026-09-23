@@ -1,5 +1,7 @@
 # Pricing and serving limits (2026-09-22):
 # https://docs.parasail.io/parasail-docs/products/overview/models
+# Public table row: parasail-ui-tars-1p5-7b; Context window=128,000; Max output=2,048.
+# This serving limit does not establish an independent native output cap for the lab model.
 # https://platform.parasail.io/api/v1/prices/serverlessEndpoints
 # Thought/action versus grounding is selected by the prompt, not an API reasoning control.
 # https://github.com/bytedance/UI-TARS#prompt-usage-guide

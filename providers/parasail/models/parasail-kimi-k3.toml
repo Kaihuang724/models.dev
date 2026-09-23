@@ -1,5 +1,7 @@
 # Pricing and serving limits (2026-09-22):
 # https://docs.parasail.io/parasail-docs/products/overview/models
+# Public table row: parasail-kimi-k3; Context window=1,048,576; Max output=1,048,576.
+# This is the host's explicit Max output cell, not a cap inferred from context.
 # https://platform.parasail.io/api/v1/prices/serverlessEndpoints
 # Toggle: chat_template_kwargs.thinking = true|false
 # Effort: chat_template_kwargs.thinking_effort = low|high|max
