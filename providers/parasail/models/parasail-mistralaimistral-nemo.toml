@@ -1,6 +1,8 @@
 # Pricing and serving limits (2026-09-22):
 # https://docs.parasail.io/parasail-docs/products/overview/models
 # https://platform.parasail.io/api/v1/prices/serverlessEndpoints
+# Exact public externalAlias: parasail-mistralaimistral-nemo (no slash or extra hyphen).
+# This is the request model ID in both sources above, not the underlying lab model path.
 # Tool support: https://docs.parasail.io/parasail-docs/guides/tool-function-calling
 base_model = "mistral/mistral-nemo"
 tool_call = false

@@ -1,10 +1,14 @@
 # Pricing and serving limits (2026-09-22):
 # https://docs.parasail.io/parasail-docs/products/overview/models
 # https://platform.parasail.io/api/v1/prices/serverlessEndpoints
-# Upstream tokenizer controls; the public catalog does not confirm the deployed renderer
-# or whether it forwards thinking_effort from chat_template_kwargs.
 # Toggle: chat_template_kwargs.thinking = true|false
 # Effort: chat_template_kwargs.thinking_effort = low|high|max
+# Authenticated POST https://api.parasail.io/v1/chat/completions verified on 2026-09-23.
+# Probe user message: "Compute 17 * 23. Reply with only the integer."; temperature=0, seed=42.
+# Effort probes (max_tokens=1, return_token_ids=true): all three prompt_token_ids differ.
+# Prompt lengths low/high/max=102/102/101; low and high differ by one token despite equal length.
+# Toggle probes observed zero reasoning tokens when off and nonzero at all three efforts when on.
+# An invalid effort also returned HTTP 200, so acceptance alone was not used as evidence.
 # https://huggingface.co/moonshotai/Kimi-K3/blob/main/tokenization_kimi.py
 # https://huggingface.co/moonshotai/Kimi-K3/blob/main/encoding_k3.py
 base_model = "moonshotai/kimi-k3"
