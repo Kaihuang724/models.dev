@@ -1,0 +1,16 @@
+# Pricing and serving limits (2026-09-22):
+# https://docs.parasail.io/parasail-docs/products/overview/models
+# https://platform.parasail.io/api/v1/prices/serverlessEndpoints
+# Structured output: supported_features in Parasail's docs catalog snapshot.
+# Snapshot source (authenticated): https://api.parasail.io/api/v1/openrouter/models
+base_model = "alibaba/qwen3-next-80b-a3b-instruct"
+structured_output = true
+
+[cost]
+input = 0.1
+output = 1.1
+cache_read = 0.07
+
+[limit]
+context = 262_144
+output = 262_144

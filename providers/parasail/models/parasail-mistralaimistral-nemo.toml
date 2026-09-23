@@ -1,0 +1,14 @@
+# Pricing and serving limits (2026-09-22):
+# https://docs.parasail.io/parasail-docs/products/overview/models
+# https://platform.parasail.io/api/v1/prices/serverlessEndpoints
+# Tool support: https://docs.parasail.io/parasail-docs/guides/tool-function-calling
+base_model = "mistral/mistral-nemo"
+tool_call = false
+
+[cost]
+input = 0.03
+output = 0.03
+
+[limit]
+context = 131_072
+output = 131_072

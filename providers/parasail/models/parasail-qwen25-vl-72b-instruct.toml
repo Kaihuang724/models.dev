@@ -1,0 +1,23 @@
+# Pricing and serving limits (2026-09-22):
+# https://docs.parasail.io/parasail-docs/products/overview/models
+# https://platform.parasail.io/api/v1/prices/serverlessEndpoints
+# Images and video: https://docs.parasail.io/parasail-docs/guides/multi-modal
+# Tool calling requires tool_choice="required"; auto selection is not reliable:
+# https://docs.parasail.io/parasail-docs/guides/tool-function-calling
+# Structured output: supported_features in Parasail's docs catalog snapshot.
+# Snapshot source (authenticated): https://api.parasail.io/api/v1/openrouter/models
+base_model = "alibaba/qwen2-5-vl-72b-instruct"
+attachment = true
+structured_output = true
+
+[cost]
+input = 0.8
+output = 1
+cache_read = 0.4
+
+[limit]
+context = 128_000
+output = 128_000
+
+[modalities]
+input = ["text", "image", "video"]

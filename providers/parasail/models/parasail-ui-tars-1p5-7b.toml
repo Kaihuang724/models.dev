@@ -1,0 +1,17 @@
+# Pricing and serving limits (2026-09-22):
+# https://docs.parasail.io/parasail-docs/products/overview/models
+# https://platform.parasail.io/api/v1/prices/serverlessEndpoints
+# Thought/action versus grounding is selected by the prompt, not an API reasoning control.
+# https://github.com/bytedance/UI-TARS#prompt-usage-guide
+# Inherited image support is consistent with the catalog's model templates;
+# the active deployment's image limits / language-model-only flag are not public.
+base_model = "bytedance/ui-tars-1.5-7b"
+reasoning_options = []
+
+[cost]
+input = 0.1
+output = 0.2
+cache_read = 0.1
+
+[limit]
+output = 2_048

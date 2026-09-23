@@ -1,0 +1,19 @@
+# Pricing and serving limits (2026-09-22):
+# https://docs.parasail.io/parasail-docs/products/overview/models
+# https://platform.parasail.io/api/v1/prices/serverlessEndpoints
+# Upstream tokenizer controls; the public catalog does not confirm the deployed renderer
+# or whether it forwards thinking_effort from chat_template_kwargs.
+# Toggle: chat_template_kwargs.thinking = true|false
+# Effort: chat_template_kwargs.thinking_effort = low|high|max
+# https://huggingface.co/moonshotai/Kimi-K3/blob/main/tokenization_kimi.py
+# https://huggingface.co/moonshotai/Kimi-K3/blob/main/encoding_k3.py
+base_model = "moonshotai/kimi-k3"
+reasoning_options = [{ type = "toggle" }, { type = "effort", values = ["low", "high", "max"] }]
+
+[cost]
+input = 3
+output = 15
+cache_read = 0.3
+
+[limit]
+output = 1_048_576

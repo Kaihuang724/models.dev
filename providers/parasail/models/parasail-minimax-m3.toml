@@ -1,0 +1,17 @@
+# Pricing and serving limits (2026-09-22):
+# https://docs.parasail.io/parasail-docs/products/overview/models
+# https://platform.parasail.io/api/v1/prices/serverlessEndpoints
+# Toggle: chat_template_kwargs.thinking_mode = enabled|disabled|adaptive
+# Control comes from the catalog chat template.
+# Structured output is advertised by the catalog's parasail:or-feature:structured_outputs tag.
+base_model = "minimax/MiniMax-M3"
+reasoning_options = [{ type = "toggle" }]
+structured_output = true
+
+[cost]
+input = 0.3
+output = 1.2
+cache_read = 0.06
+
+[limit]
+output = 524_288

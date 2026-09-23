@@ -1,0 +1,17 @@
+# Pricing and serving limits (2026-09-22):
+# https://docs.parasail.io/parasail-docs/products/overview/models
+# https://platform.parasail.io/api/v1/prices/serverlessEndpoints
+# Toggle: chat_template_kwargs.thinking = true|false
+# Effort: chat_template_kwargs.reasoning_effort = high|max
+# Model controls: https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/encoding
+base_model = "deepseek/deepseek-v4-pro"
+reasoning_options = [{ type = "toggle" }, { type = "effort", values = ["high", "max"] }]
+
+[cost]
+input = 1.74
+output = 3.48
+cache_read = 0.1
+
+[limit]
+context = 1_048_576
+output = 1_048_576

@@ -1,0 +1,16 @@
+# Pricing and serving limits (2026-09-22):
+# https://docs.parasail.io/parasail-docs/products/overview/models
+# https://platform.parasail.io/api/v1/prices/serverlessEndpoints
+# Toggle: chat_template_kwargs.enable_thinking = true|false
+# Effort: chat_template_kwargs.reasoning_effort = high|max (catalog chat template)
+base_model = "zhipuai/glm-5.2"
+reasoning_options = [{ type = "toggle" }, { type = "effort", values = ["high", "max"] }]
+
+[cost]
+input = 1.4
+output = 4.4
+cache_read = 0.26
+
+[limit]
+context = 262_144
+output = 262_144

@@ -1,0 +1,12 @@
+# Pricing and serving limits (2026-09-22):
+# https://docs.parasail.io/parasail-docs/products/overview/models
+# https://platform.parasail.io/api/v1/prices/serverlessEndpoints
+base_model = "alibaba/qwen3-vl-8b-instruct"
+
+[cost]
+input = 0.25
+output = 0.75
+cache_read = 0.12
+
+[limit]
+output = 262_144
